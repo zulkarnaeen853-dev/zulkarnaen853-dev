@@ -1,37 +1,17 @@
 import React from "react";
-// Replace these paths with your real portfolio project mockup screenshot assets
-// import EcommerceImg from "../assets/project-ecommerce.png";
-// import FitnessImg from "../assets/project-fitness.png";
-// import ContentImg from "../assets/project-content.png";
+import WeatherImg from "../assets/Weather.jpg";
 
 export const Project = () => {
-  // Projects data mapped directly from your reference structure
-//   const projectsList = [
-//     {
-//       title: "E-Commerce Platform",
-//       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestie quas vel sint commodi.",
-//       img: EcommerceImg,
-//       tags: ["React", "Node.js", "MongoDB"],
-//       codeLink: "https://github.com",
-//       demoLink: "https://demo.com",
-//     },
-//     {
-//       title: "Fitness Tracker App",
-//       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestie quas vel sint commodi.",
-//       img: FitnessImg,
-//       tags: ["React Native", "Firebase"],
-//       codeLink: "https://github.com",
-//       demoLink: "https://demo.com",
-//     },
-//     {
-//       title: "Content Generator",
-//       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestie quas vel sint commodi.",
-//       img: ContentImg,
-//       tags: ["Python", "OpenAI"],
-//       codeLink: "https://github.com",
-//       demoLink: "https://demo.com",
-//     },
-//   ];
+  const projectsList = [
+    {
+      title: "Weather App",
+      desc: "An application that displays real-time weather metrics, local temperatures, and forecast conditions.",
+      img: WeatherImg,
+      tags: ["React", "Tailwind CSS", "HTML"],
+      codeLink: "https://github.com/zulkarnaeen853-dev/Weather",
+      demoLink: "https://zulkarnaeen853-dev.github.io/Weather/",
+    }
+  ];
 
   return (
     <section
@@ -53,42 +33,43 @@ export const Project = () => {
 
       {/* Responsive Cards Grid Matrix */}
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* {projectsList.map((project, index) => ( */}
+        {projectsList.map((project, index) => (
           <div
-            // key={index}
+            key={index}
             className="flex flex-col h-full overflow-hidden transition-all duration-300 bg-white dark:bg-[#0c1a2c]/60 border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-[#0052cc] dark:hover:border-[#00f0ff]/40 hover:shadow-lg group"
           >
             <div className="relative w-full pt-[56.25%] bg-slate-100 dark:bg-slate-950 overflow-hidden border-b border-slate-200 dark:border-slate-800">
               <img
-                // src={project.img}
-                // alt={`${project.title} screenshot preview`}
+                src={project.img}
+                alt={`${project.title} screenshot preview`}
                 className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
               />
             </div>
+            
             <div className="flex flex-col justify-between flex-1 p-6 space-y-4">
               <div className="space-y-2">
                 <h3 className="text-xl font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-[#0052cc] dark:group-hover:text-[#00f0ff] transition-colors">
-                  {/* {project.title} */}
+                  {project.title}
                 </h3>
                 <p className="text-slate-500 dark:text-slate-400 text-xs md:text-sm leading-relaxed font-sans line-clamp-3">
-                  {/* {project.desc} */}
+                  {project.desc}
                 </p>
               </div>
 
               <div className="flex flex-wrap gap-2">
-                {/* {project.tags.map((tag, tIdx) => ( */}
+                {project.tags.map((tag, tIdx) => (
                   <span
-                    // key={tIdx}
+                    key={tIdx}
                     className="text-[10px] md:text-xs font-mono font-medium px-3 py-1 rounded-md bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 cursor-default"
                   >
-                    {/* {tag} */}
+                    {tag}
                   </span>
-                {/* ))} */}
+                ))}
               </div>
 
               <div className="grid grid-cols-2 gap-4 pt-2">
                 <a
-                //   href={project.codeLink}
+                  href={project.codeLink}
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-center gap-2 px-4 py-2 text-xs font-semibold rounded-lg font-mono transition-all border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800"
@@ -106,7 +87,7 @@ export const Project = () => {
                 </a>
 
                 <a
-                //   href={project.demoLink}
+                  href={project.demoLink}
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-center gap-2 px-4 py-2 text-xs font-bold rounded-lg font-mono transition-all bg-[#0072ff] hover:bg-[#005ccc] dark:bg-gradient-to-r dark:from-[#0072ff] dark:to-[#005ccc] text-white shadow-sm hover:shadow-[0_4px_12px_rgba(0,114,255,0.3)]"
@@ -131,7 +112,7 @@ export const Project = () => {
               </div>
             </div>
           </div>
-        {/* ))} */}
+        ))} 
       </div>
     </section>
   );
